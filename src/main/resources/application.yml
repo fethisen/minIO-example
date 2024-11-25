@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: minio-demo
+
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+
+minio:
+  url: http://localhost:9000
+  access-key: fethi
+  secret-key: 11223344 #password
+  bucket:
+    image: proposal-image

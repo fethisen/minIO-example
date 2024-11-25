@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  minio:
+    image: minio/minio:latest
+    container_name: minio_server
+    ports:
+      - "9000:9000"
+      - "9090:9090"
+    environment:
+      MINIO_ROOT_USER: fethi
+      MINIO_ROOT_PASSWORD: 11223344
+      MINIO_DOMAIN: yourdomain.com
+    volumes:
+      - /Users/fethisen/Projects/DockerVolume/minIO/data:/data
+    command: server /data --console-address ":9090"
